@@ -1,0 +1,59 @@
+.footer {
+  grid-area: footer;
+  background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+  padding: 5px;
+  text-align: center;
+}
+ /
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Style the navigation menu */
+
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style the content */
+article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+  padding: 10px;
+}
+
+.a2{
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+   padding: 20px;
+    text-align: center;
+    overflow-y: scroll;
+    height: 500px;
+}
+
+/* Style the footer */
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+}
+
