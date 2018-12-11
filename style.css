@@ -1,59 +1,95 @@
-.footer {
-  grid-area: footer;
-  background-image: url("images/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
-  padding: 5px;
-  text-align: center;
-}
- /
-section {
-    display: -webkit-flex;
-    display: flex;
+fieldset{
+	width: 100%;
 }
 
-/* Style the navigation menu */
-
-
-/* Style the list inside the menu */
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.img{
+	width: 250px;
+	height: 200px;
+	display: block;
+	margin: auto;
+}
+.ctr{
+	display: block;
+	margin-right: auto;
+	margin-left: 40%;
 }
 
-/* Style the content */
-article {
-    -webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
-  padding: 10px;
+.login{
+	width: 50px;
 }
 
-.a2{
-    -webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
-   padding: 20px;
+.f1{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.imglist{
+	width: 355px;
+	height: 355px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.txtlist{
+	color: green;
+}
+
+<style>
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
     text-align: center;
-    overflow-y: scroll;
-    height: 500px;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
 }
 
-/* Style the footer */
-.footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
 
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    section {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-    }
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
 }
 
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+</style>
