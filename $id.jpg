@@ -1,0 +1,334 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+body {font-family: Arial;}
+
+.body1 {
+background: #E0EAFC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn-group button {
+    background-color: white; 
+    border: 1px solid black; 
+    color: black; 
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+div {
+height: auto; /*if more info comes on the page, it will stretch down*/
+width: 100%;
+margin: 0 auto; /*this will cause the div to be in the center*/
+}
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: lightblue;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.imga {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+form.example input[type=text] {
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+.text-on-pannel {
+  background: #fff none repeat scroll 0 0;
+  height: auto;
+  margin-left: 20px;
+  padding: 3px 5px;
+  position: absolute;
+  margin-top: -47px;
+  border: 1px solid #337ab7;
+  border-radius: 8px;
+}
+
+.panel {
+  /* for text on pannel */
+  margin-top: 27px !important;
+}
+
+.panel-body {
+  padding-top: 30px !important;
+}
+
+</style>
+</head>
+<body class="body1">
+
+<img class="imga"src="cookpedia.png" alt="Logo cookpedia">
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Main')" >Main Menu</button>
+  <button class="tablinks" onclick="openCity(event, 'LD')" id="defaultOpen">Login/Daftar</button>
+  <button class="tablinks" onclick="openCity(event, 'TR')">Tulis Resep</button>
+  <button class="tablinks" onclick="openCity(event, 'Profile')">Profile</button>
+  <button class="tablinks" onclick="openCity(event, 'Kategori')">Kategori</button>
+</div>
+
+<div id="Main" class="tabcontent">
+<form class="example" style="margin-top: 50px;margin-left:auto;margin-right:auto;max-width:300px">
+  <input type="text" placeholder="Cari Resep" name="Search">
+  <input type="submit" value="Cari" onclick="myFunction()"></input>
+</form>
+<form>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<div class="container" style="float: left;margin-left: 250px">
+  <div class="panel panel-primary row" style="width: 1350px;">
+    <div class="panel-body">
+      <h3 class="text-on-pannel text-primary "><strong class="text-uppercase"> Recook </strong></h3>
+         <fieldset class="container panel panel-primary col-sm-3"  style="width: 33%;height: 550px;float:left;padding-top: 15px;">
+      <img style="height: 150px;width:300px;"src="Burger.jpg" alt="makanan1">
+      <br>
+      <p>Burger</p>
+      <p>By . . . . </p>
+      <p>Recook By . . . </p>
+      <fieldset class="container panel panel-primary " style="height: 200px;width: 300px;padding-top: 15px">
+        <p>Review</p>
+      </fieldset>
+      <img src="heart.png" style="width: 50px;height: 50px;margin-left: 100px;" onclick="myFunction()">
+      <img src="bookmark.png" style="width: 50px;height: 50px;" onclick="myFunction()">
+ </fieldset>
+ <fieldset class="container panel panel-primary col-sm-3" style="width: 33%;height: 550px;float: right;padding-top: 15px;">
+      <img style="height: 150px;width:300px;"src="pempek.jpg" alt="makanan2">
+      <br>
+      <p>Pempek Palembang</p>
+      <p>By . . . . </p>
+      <p>Recook By . . . </p>
+      <fieldset class="container panel panel-primary" style="height: 200px;width: 300px;padding-top: 15px">
+        <p>Review</p>
+      </fieldset>
+      <img src="heart.png" style="width: 50px;height: 50px;margin-left: 100px;" onclick="myFunction()">
+      <img src="bookmark.png" style="width: 50px;height: 50px;" onclick="myFunction()">
+ </fieldset>
+    <fieldset class="container panel panel-primary col-sm-3" style="width: 33%;height: 550px;padding-top: 15px;">
+      <img style="height: 150px;width:300px;"src="ayambetutu.jpg" alt="makanan3">
+      <br>
+      <p>Ayam Betutu</p>
+      <p>By . . . . </p>
+      <p>Recook By . . . </p>
+      <fieldset class="container panel panel-primary" style="height: 200px;width: 300px;padding-top: 15px">
+        <p>Review</p>
+      </fieldset>
+      <img src="heart.png" style="width: 50px;height: 50px;margin-left: 100px;" onclick="myFunction()">
+      <img src="bookmark.png" style="width: 50px;height: 50px;" onclick="myFunction()">
+ </fieldset>
+     <fieldset class="container panel panel-primary col-sm-3" style="width: 33%;height: 550px;padding-top: 15px;">
+      <img style="height: 150px;width:300px;"src="nasigor.jpg" alt="makanan4">
+      <br>
+      <p>Nasi Goreng</p>
+      <p>By . . . . </p>
+      <p>Recook By . . . </p>
+      <fieldset class="container panel panel-primary" style="height: 200px;width: 300px;padding-top: 15px">
+        <p>Review</p>
+      </fieldset>
+      <img src="heart.png" style="width: 50px;height: 50px;margin-left: 100px;" onclick="myFunction()">
+      <img src="bookmark.png" style="width: 50px;height: 50px;" onclick="myFunction()">
+ </fieldset>
+
+  </fieldset>
+    </div>
+  </div>
+  <div>
+</form>
+</div>
+</div>
+</form>
+</div>
+
+
+<div id="LD" class="tabcontent">
+  <div style="text-align: center;font: bold;font-size: 40;"> Buat Akun Cookpedia</div>
+  <br>
+  <br>
+  <img src="user.png" alt="user" style="width: 50px;margin-left: 830px;">
+  <input type="text" placeholder="Nama Pengguna" name="Search" style="width: 175px">
+  <br>
+  <img src="email.png" alt="email" style="width: 50px;margin-left: 830px;">
+  <input type="text" placeholder="Email" name="Search" style="width: 175px">
+  <br>
+  <img src="password.png" alt="password" style="width: 45px;margin-left: 830px;">
+  <input type="text" placeholder="Kata Sandi" name="Search"style="width: 175px;margin-left: 5px;">
+  <br>
+  <img src="password.png" alt="password" style="width: 45px;margin-left: 830px;">
+  <input type="text" placeholder="Konfirmasi Kata Sandi" name="Search"style="width: 175px;margin-left: 5px;">
+  <br>
+  <input type="checkbox" name="agreement" value="yes" style="margin-left: 830px;"> Saya ingin mendapat informasi
+  <p style="margin-left: 830px;"> resep terbaru dari cookpedia</p>
+  <hr>
+  <input type="submit" value="Buat Akun" style="width: 230px;margin-left: 830px" onclick="myFunction()"></input>
+  <div style="font-size: 20;text-align: center;"><a href="login.html">Sudah punya akun Cookpedia? Masuk</a></div>
+</div>
+
+<div id="TR" class="tabcontent">
+<img class="imga" src="gambar1.png" alt="makananupload" style="height: 200px;width: 400px;margin-top: 20px;" onclick="myFunction()">
+<br>
+<div style="font-size: 20;text-align: center;">Upload foto makananmu di atas</div>
+  <input style="margin-left: 780px;width: 345px" type="text" placeholder="Judul Resep" name="Search">
+  <br>
+  <br>
+  <textarea rows="4" cols="50" name="comment" style="margin-left: 780px" >Bahan-Bahan</textarea>
+  <br>
+  <br>
+  <textarea rows="4" cols="50" name="comment" style="margin-left: 780px" >Langkah memasak.</textarea>
+  <br>
+  <br>
+  <input type="submit" value="Upload Resepmu!" style="width: 345px;margin-left: 780px" onclick="myFunction()"></input>
+</div>
+
+
+<div id="Profile" class="tabcontent">
+<img class="imga" src="gambar1.png" alt="makananupload" style="height: 200px;width: 400px;margin-top: 20px;">
+<br>
+<div style="font-size: 20;text-align: center;">Namamu</div>
+<form>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<div class="container" style="float: left;margin-left: 250px">
+  <div class="panel panel-primary row" style="width: 1350px;">
+    <div class="panel-body">
+    <div class="btn-group">
+  <button type="button" onclick="window.location.href='resep.html'">Resep</button>
+  <button type="button" onclick="window.location.href='cookmark.html'">Cookmark</button>
+  <button type="button" onclick="window.location.href='profil.html'">Profile</button>
+
+</div>
+  </div>
+  <div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div id="Kategori" class="tabcontent">
+<form>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<div class="container" style="float: left;margin-left: 250px">
+  <div class="panel panel-primary row" style="width: 1350px;">
+    <div class="panel-body">
+      <h3 class="text-on-pannel text-primary "><strong class="text-uppercase"> Kategori </strong></h3>
+     <fieldset class="container panel col-sm-4" style="width: 200px;height: 200px;padding-top: 15px;margin-left: 100px">
+      <a href="kategoridetil.html"><img style="height: 150px;width:300px;"src="gambar1.png" alt="kategori1" onclick="myFunction()">
+      <br>
+      <p style="text-align: center;margin-left: 120px">Masakan Indonesia</p>
+ </fieldset>
+      <fieldset class="container panel col-sm-4" style="width: 200px;height: 200px;padding-top: 15px;margin-left: 200px">
+      <a href="masakaninternasional.html"><img style="height: 150px;width:300px;"src="gambar1.png" alt="kategori2" onclick="myFunction()">
+      <br>
+      <p style="text-align: center;margin-left: 120px";>Masakan Internasional</p>
+ </fieldset>
+      <fieldset class="container panel col-sm-4" style="width: 200px;height: 200px;padding-top: 15px;margin-left: 200px">
+      <a href="roti.html"><img style="height: 150px;width:300px;"src="gambar1.png" alt="kategori3" onclick="myFunction()">
+      <br>
+      <p style="text-align: center;margin-left: 120px";>Roti</p>
+ </fieldset>
+      <fieldset class="container panel col-sm-4" style="width: 200px;height: 200px;padding-top: 15px;margin-left: 100px">
+      <a href="kuekering.html"><img style="height: 150px;width:300px;"src="gambar1.png" alt="kategori4" onclick="myFunction()">
+      <br>
+      <p style="text-align: center;margin-left: 120px">Kue Kering</p>
+ </fieldset>
+      <fieldset class="container panel col-sm-4" style="width: 200px;height: 200px;padding-top: 15px;margin-left: 200px">
+      <a href="minuman.html"><img style="height: 150px;width:300px;"src="gambar1.png" alt="kategori5" onclick="myFunction()">
+      <br>
+      <p style="text-align: center;margin-left: 120px";>Minuman</p>
+ </fieldset>
+      <fieldset class="container panel col-sm-4" style="width: 200px;height: 200px;padding-top: 15px;margin-left: 200px">
+      <a href="nasi.html"><img style="height: 150px;width:300px;"src="gambar1.png" alt="kategori6" onclick="myFunction()">
+      <br>
+      <p style="text-align: center;margin-left: 120px";>Nasi</p>
+ </fieldset>
+    </div>
+  </div>
+  <div>
+</form>
+</div>
+</div>
+</form>
+</div>
+
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+function myFunction() {
+	
+}
+
+</script>
+     
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ 
+</body>
+</html> 
